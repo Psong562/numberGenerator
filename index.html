@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+let turns = 0
+let wins = 0
+let loss = 0
+let tie = 0
+let choices = [`rock`, `paper`, `scissors`]
+
+for (let i = 0; i <= 10; i++){
+let userInput = prompt(choices)
+  console.log(userInput);  
+
+let cpuChoice = choices[Math.floor(Math.random() * 2 )];
+  console.log(cpuChoice);
+// win choices
+       if  (
+            (cpuChoice ===`rock` && userInput ===`paper`) ||
+            (cpuChoice === `paper` && userInput ===`scissors`) ||
+            (cpuChoice === `scissors` && UserInput === `rock`)) {
+           alert(`User Win`);
+           wins++;
+            }else if (
+            (cpuChoice === `rock` && userInput === `scissors`) ||
+            (cpuChoice === `paper` && userInput === `rock`) ||
+            (cpuChoice === `scissors` && UserInput === `paper`)) {
+            alert(`User loss`);
+            loss++;
+            } else {
+            alert(`tie`);
+            tie++;
+            }  
+
+console.log (`wins; ${wins}`);    
+console.log (`loss; ${loss}`);
+console.log (`tie; ${tie}`);
+}
+
+</script>
+
+
+  
+</body>
+</html>
